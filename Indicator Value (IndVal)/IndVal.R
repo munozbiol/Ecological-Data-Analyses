@@ -3,7 +3,7 @@
 
 # The dummy dataset was created from the original dataset with the function
 # randomizeMatrix() from the picante package.
-# Once the project is finished, the original dataset would be uploaded
+# Once the project is finished and data available, the original dataset will be uploaded
 
 
 #Load libraries 
@@ -48,12 +48,12 @@ dummy_dataset <- as.data.frame(dummy_dataset)
 
 #Creating a new mixed dataset
 
-#we extract only the reservoir and trophic state columns.
+# We need the extract only the reservoir and trophic state columns from original.
 extractcols <- noduplicates[,1:2]
 
-# new datasets
+# paste the previous columns to obtain new datasets
 
-#by "richness" or mixed among species
+# by "richness" or mixed among species
 dummy <- cbind(extractcols, dummydata) 
 
 # by frequency or mixed among sites
@@ -62,7 +62,7 @@ dummydataset <- cbind(extractcols, dummy_dataset)
 # Save the new CSV file
 
 write.csv(dummy, file = "dummy.csv")
-
+write.csv(dummydataset, file = "dummyfrequencies")
 
 
 # Performing the Ind Val 
@@ -88,7 +88,7 @@ ind.val <- multipatt(abundances,
                      func = "IndVal.g",
                      control = how(nperm = 9999))
 
-#if your computational power is not enough, consider reduce the number of permutations
+# If your computational power is not enough, consider reduce the number of permutations
 
 
 #Seeing the results 
