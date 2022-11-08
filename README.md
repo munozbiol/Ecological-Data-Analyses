@@ -1,4 +1,4 @@
-# Ecological-Data-Analysis
+# Ecological-Data-Analyses
 
 Welcome everyone! 
 
