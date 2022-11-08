@@ -1,5 +1,5 @@
 
-# Indicador Value 
+# Indicator Value 
 
 # The dummy dataset was created from the original dataset with the function
 # randomizeMatrix() from the picante package.
